@@ -458,10 +458,6 @@ impl<'a> ContextPrototype<'a> {
             unsafe {
                 extra_functions.SwapIntervalSGI(swap_mode);
             }
-        } else {
-            return Err(CreationError::OsError(
-                "Couldn't find any available vsync extension".to_string(),
-            ));
         }
 
         Ok(Context {
